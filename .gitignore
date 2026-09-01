@@ -1,0 +1,54 @@
+# ============================================================
+# ROOT-LEVEL .gitignore for BehaveGuard-UPI GitHub Repo
+# ============================================================
+
+# ---- APK / Build outputs (NEVER commit these) ----
+*.apk
+*.aab
+*.ipa
+
+# ---- Flutter/Dart build artifacts ----
+**/build/
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.pub-cache/
+**/.pub/
+**/doc/api/
+
+# ---- IDE & Editor files ----
+.idea/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+
+# ---- Android Studio artifacts ----
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+**/android/.gradle/
+**/android/local.properties
+
+# ---- Firebase / Secrets ----
+google-services.json
+GoogleService-Info.plist
+**/android/app/google-services.json
+
+# ---- Logs ----
+*.log
+*.pyc
+*.class
+
+# ---- Temp files ----
+migrate_working_dir/
+
+# Root-level duplicate model files (already in behave_guard_flutter/assets/models/)
+/model_a.onnx
+/model_b.onnx
+/model_b_config.json
+/model_c.onnx
+/model_c_config.json
+/project_code_explanation.txt
+/project_stuctur.txt
+/BehaveGuard-UPI-debug.apk

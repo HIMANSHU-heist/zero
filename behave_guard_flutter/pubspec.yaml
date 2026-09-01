@@ -1,0 +1,51 @@
+name: behave_guard_upi
+description: BehaveGuard-UPI — Mock UPI payment simulator with real-time fraud detection.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Firebase
+  firebase_core: ^3.13.1
+  firebase_auth: ^5.6.1
+  cloud_firestore: ^5.6.9
+  google_sign_in: ^6.3.0
+
+  # QR
+  mobile_scanner: ^5.2.3
+  qr_flutter: ^4.1.0
+
+  # Location
+  geolocator: ^13.0.2
+
+  # Storage
+  shared_preferences: ^2.3.5
+
+  # Camera (face verification)
+  camera: ^0.11.1
+
+  # Utilities
+  crypto: ^3.0.6
+  uuid: ^4.5.1
+  image: ^4.3.0
+
+  # State management
+  provider: ^6.1.5
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/models/

@@ -1,0 +1,41 @@
+{
+  "name": "BehaveGuard-UPI Flutter Dev",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17",
+      "jdk": "ms"
+    }
+  },
+
+  "onCreateCommand": "bash .devcontainer/setup.sh",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Dart-Code.flutter",
+        "Dart-Code.dart-code",
+        "ms-vscode.vscode-json",
+        "felixangell.android-studio-flutter"
+      ],
+      "settings": {
+        "dart.flutterSdkPath": "/home/vscode/flutter",
+        "editor.formatOnSave": true,
+        "editor.rulers": [80]
+      }
+    }
+  },
+
+  "remoteEnv": {
+    "PATH": "/home/vscode/flutter/bin:/home/vscode/android-sdk/cmdline-tools/latest/bin:/home/vscode/android-sdk/platform-tools:${PATH}",
+    "ANDROID_HOME": "/home/vscode/android-sdk",
+    "ANDROID_SDK_ROOT": "/home/vscode/android-sdk"
+  },
+
+  "postCreateCommand": "flutter pub get",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/behave_guard_flutter",
+
+  "forwardPorts": [],
+  "remoteUser": "vscode"
+}

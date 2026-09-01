@@ -1,0 +1,33 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isOwner(userId) {
+      return request.auth != null && request.auth.uid == userId;
+    }
+    match /users/{userId} {
+      allow read: if request.auth != null;
+      allow write: if isOwner(userId);
+    }
+    match /mock_banks/{bankId}/accounts/{userId} {
+      allow read, write: if request.auth != null;
+    }
+    match /transactions/{txnId} {
+      // resource is null when the document doesn't exist yet (e.g. the
+      // idempotency check in Payment.complete() reads the txn doc BEFORE
+      // creating it) â€” must guard for that, otherwise resource.data.* on a
+      // null resource errors out and Firestore denies the read entirely.
+      allow read: if request.auth != null && (
+        resource == null ||
+        request.auth.uid == resource.data.senderUid ||
+        request.auth.uid == resource.data.receiverUid
+      );
+      allow create: if request.auth != null
+        && request.auth.uid == request.resource.data.senderUid;
+      allow update, delete: if false;
+    }
+    match /counters/{counterId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+    }
+  }
+}
