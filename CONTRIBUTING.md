@@ -18,11 +18,12 @@
 4. [Verify the Environment](#-4-verify-the-environment)
 5. [Understand the Project Structure](#-5-understand-the-project-structure)
 6. [Edit the Code](#-6-edit-the-code)
-7. [Build the APK](#-7-build-the-apk)
-8. [Test on a Real Android Device via USB](#-8-test-on-a-real-android-device-via-usb)
-9. [Test on an Android Emulator](#-9-test-on-an-android-emulator)
-10. [Common Errors and Fixes](#-10-common-errors-and-fixes)
-11. [GitHub Codespaces](#-11-github-codespaces-browser-no-install)
+7. [How to Contribute (Git & PR Workflow)](#-7-how-to-contribute-git--pr-workflow)
+8. [Build the APK](#-7-build-the-apk)
+9. [Test on a Real Android Device via USB](#-8-test-on-a-real-android-device-via-usb)
+10. [Test on an Android Emulator](#-9-test-on-an-android-emulator)
+11. [Common Errors and Fixes](#-10-common-errors-and-fixes)
+12. [GitHub Codespaces](#-11-github-codespaces-browser-no-install)
 
 ---
 
@@ -507,6 +508,53 @@ flutter build apk --debug
 - Live hot-reload on a device
 
 ---
+---
+
+## . How to Contribute (Git & PR Workflow)
+
+> ⚠️ **Important:** Direct pushes to the `main` branch are blocked by repository protection rules. All contributions must go through a **Feature Branch** and a **Pull Request (PR)**.
+
+### Step 1 — Sync your local repository
+Before creating a new branch, always ensure your local `main` is up to date:
+bash
+git checkout main
+git pull origin main 
+Step 2 — Create a new feature branch
+Always create a descriptive branch for the feature or fix you are working on:
+
+Bash
+git checkout -b feature/your-feature-name
+# Examples:
+# git checkout -b feature/login-ui-fix
+# git checkout -b fix/onnx-model-crash
+Step 3 — Make changes and commit
+After editing files, stage and commit them:
+
+Bash
+git add .
+git commit -m "feat: brief description of what you changed"
+Step 4 — Push your branch to GitHub
+Bash
+git push origin feature/your-feature-name
+Step 5 — Open a Pull Request (PR)
+Go to the GitHub repository page in your browser.
+
+You will see a banner saying "feature/your-feature-name had recent pushes" -> Click Compare & pull request.
+
+Add a clear title and description of your changes.
+
+Click Create pull request.
+
+Wait for the repo maintainer to review, approve, and merge your changes into main.
+
+
+---
+
+### ३. 'Prerequisites' (Section 1) मध्ये एक छोटी टीप ॲड करा (पर्यायी पण उपयुक्त):
+
+Section 1 मधील टेबलखाली ही ओळ टाका:
+markdown
+> **Note for Collaborators:** Make sure you have accepted the GitHub repository invitation from the maintainer before cloning and pushing branches.
 
 ## Questions or Issues?
 
