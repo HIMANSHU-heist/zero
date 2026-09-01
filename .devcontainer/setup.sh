@@ -49,8 +49,8 @@ echo 'export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/
 yes | sdkmanager --licenses > /dev/null 2>&1 || true
 sdkmanager --install \
     "platform-tools" \
-    "platforms;android-35" \
-    "build-tools;35.0.0" \
+    "platforms;android-36" \
+    "build-tools;36.0.0" \
     "ndk;27.0.12077973" 2>&1 | tail -5
 
 # 7. Configure Flutter

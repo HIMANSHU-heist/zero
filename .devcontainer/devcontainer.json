@@ -33,8 +33,8 @@
     "ANDROID_SDK_ROOT": "/home/vscode/android-sdk"
   },
 
-  "postCreateCommand": "flutter pub get",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/behave_guard_flutter",
+  "postCreateCommand": "cd /workspaces/${localWorkspaceFolderBasename}/behave_guard_flutter && flutter pub get",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
   "forwardPorts": [],
   "remoteUser": "vscode"
