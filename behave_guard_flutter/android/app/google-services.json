@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "119017141733",
+    "project_id": "bejaveguardctx",
+    "storage_bucket": "bejaveguardctx.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119017141733:android:868af6c43c8c3cafa72b0c",
+        "android_client_info": {
+          "package_name": "com.behave.guard.behave_guard_upi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119017141733-d4n9sap3ik3jr5p7j872qchb6bti9847.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.behave.guard.behave_guard_upi",
+            "certificate_hash": "8561e0509cf35d707a7c5ab239ad5eb20e5a87c4"
+          }
+        },
+        {
+          "client_id": "119017141733-unb3ntr97p93ktbt5ji7mpj8mcq1krlp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhvTxbnHKnJFt6dCmw2IEGdHbrk8qwTP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119017141733-unb3ntr97p93ktbt5ji7mpj8mcq1krlp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
